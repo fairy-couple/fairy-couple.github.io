@@ -7376,4 +7376,8 @@ input, select, textarea {
 			}
 
 	}
-	
+	@font-face { 
+		font-family: "wedingFont";
+		src: url("../../fonts/ttf/Jalnan.ttf") format("truetype");
+		font-weight: bolder;
+	}
