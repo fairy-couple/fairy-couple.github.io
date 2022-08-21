@@ -19,7 +19,7 @@
 	</script>
 	<title>요정커플 청첩장</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -254,10 +254,10 @@
 					<br>
 					<p style="margin-bottom: 1.1rem;">[마음 전하실 곳]</p>
 					<p style="margin-bottom: 1.0rem;">&lt; 신랑측 &gt;</p>
-					<p id="yosepAccount" style="margin-bottom: 0.6rem;">대구은행 094-13-188693 김요셉</p> <input style="margin-bottom: 1.1rem" type="button" value="계좌번호 복사" onclick="copy_to_yosepAccount()" readonly> 
-					<p id="momAccount" style="margin-bottom: 0.6rem;">대구은행 094-13-188693 박점희</p> <input style="margin-bottom: 1.4rem" type="button" value="계좌번호 복사" onclick="copy_to_momAccount()" readonly> 
+					<p id="yosepAccount" style="margin-bottom: 0.6rem;">대구은행 094-13-188693 김요셉</p> <input style="margin-bottom: 1.1rem; font-size: medium;" type="button" value="계좌번호 복사" onclick="copy_to_yosepAccount()" readonly> 
+					<p id="momAccount" style="margin-bottom: 0.6rem;">대구은행 094-13-188693 박점희</p> <input style="margin-bottom: 1.4rem; font-size: medium;" type="button" value="계좌번호 복사" onclick="copy_to_momAccount()" readonly> 
 					<p style="margin-bottom: 1.0rem;">&lt; 신부측 &gt;</p>
-					<p id="jeongeunAccount" style="margin-bottom: 0.6rem;">대구은행 508-12-706921-8 장정은</p> <input type="button" value="계좌번호 복사" onclick="copy_to_jeongeunAccount()" readonly>
+					<p id="jeongeunAccount" style="margin-bottom: 0.6rem;">대구은행 508-12-706921-8 장정은</p> <input style="font-size: medium;"type="button" value="계좌번호 복사" onclick="copy_to_jeongeunAccount()" readonly>
 				</div>
 				<div class="image filtered tinted" data-position="top left">
 					<img src="images/pic02.jpg" alt="" />
@@ -349,7 +349,7 @@
 		marker.setMap(map);
 
 		var iwContent =
-			'<div style="padding:5px; color:black">강북컨벤션웨딩 <br><a href="https://map.kakao.com/link/map/강북컨벤션웨딩,35.901347,128.546555" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/강북컨벤션웨딩,35.901347,128.546555" style="color:blue" target="_blank"> / 길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+			'<div style="padding:5px; color:black">강북컨벤션웨딩 <br><a href="https://map.kakao.com/link/map/강북컨벤션웨딩,35.901347,128.546555" style="color:blue" target="_blank">크게보기</a> <a href="https://map.kakao.com/link/to/강북컨벤션웨딩,35.901347,128.546555" style="color:blue" target="_blank"> / 길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
 			iwPosition = new kakao.maps.LatLng(35.901347, 128.546555); //인포윈도우 표시 위치입니다
 
 		// 인포윈도우를 생성합니다
