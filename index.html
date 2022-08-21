@@ -7,7 +7,16 @@
 <html>
 
 <head>
+	<!-- <script>
+		window.addEventListener('load', function() {
+  setTimeout(function() {
+    window.scrollTo( 0, screen.height/2 );
+  },1)
+})
+	</script> -->
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css"> -->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3376697716997a186d3b3774a029124">
+	</script>
 	<title>Ethereal by HTML5 UP</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
@@ -15,6 +24,9 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	<style>
+		button{
+			padding: 0;
+		}
 		#mainImg {
 			height: 400px;
 		}
@@ -45,6 +57,7 @@
 		.panel.banner .content {
 			padding: 20px 2.75rem 1.3875rem 2.75rem;
 		}
+
 		#subContent {
 			/* text-align: center; */
 		}
@@ -120,18 +133,32 @@
 		.btn.red:active {
 			border-bottom: 2px solid #c1370e;
 		}
-		#invitation{
+		.btn.black {
+			background-color: #222122;
+			border-bottom: 5px solid #363436;
+		}
+
+		.btn.black:active {
+			border-bottom: 2px solid #363436;
+		}
+		#invitation {
 			text-align: center;
 		}
-		#boldSpan{
-			font-size:1.2rem;
+
+		#boldSpan {
+			font-size: 1.2rem;
 			letter-spacing: 10px;
 		}
-		body {overflow-x:hidden !important}
-	</style> 
+
+		body {
+			/* overflow-x:hidden !important */
+			/* width: 100%; */
+			justify-content: center;
+		}
+	</style>
 </head>
 
-<body class="is-preload" style="scroll: no;">
+<body class="is-preload">
 
 	<!-- Page Wrapper -->
 	<div id="page-wrapper">
@@ -158,15 +185,14 @@
 				</div>
 			</section>
 			<!-- 신랑 소개 -->
-			<section class="panel color1" >
+			<section class="panel color1">
 				<div class="gallery">
 					<a href="images/weding/신랑독사진.jpg" class="image span-2-5" data-position="top"><img
 							src="images/weding/신랑독사진.jpg" id="man" alt="" /></a>
 				</div>
 				<div class="intro joined">
 					<h2 class="major">신랑 김요셉</h2>
-					<p>연락처) 010-3336-1900</p>
-					<p>축의금) 대구은행 094-13-188693</p>
+					<p>연락처) <br>010-3336-1900</p>
 				</div>
 				<!-- <div class="inner">
 					<ul class="grid-icons three connected">
@@ -179,15 +205,14 @@
 				</div> -->
 			</section>
 			<!-- 신부 소개 -->
-			<section class="panel color1" >
-				<div class="gallery" >
+			<section class="panel color1">
+				<div class="gallery">
 					<a href="images/weding/신부독사진.jpg" class="image span-2-5" data-position="top"><img
 							src="images/weding/신부독사진.jpg" id="girl" alt="" /></a>
 				</div>
-				<div class="intro joined" >
+				<div class="intro joined">
 					<h2 class="major">신부 장정은</h2>
-					<p>연락처) 010-7199-5527</p>
-					<p>축의금) 대구은행 508-12-706921-8</p>
+					<p>연락처)<br> 010-7199-5527</p>
 				</div>
 				<!-- <div class="inner">
 					<ul class="grid-icons three connected">
@@ -206,18 +231,23 @@
 			</section>
 			<!-- Panel (Spotlight) -->
 			<section class="panel spotlight medium right" id="first">
-				<div class="content span-7" id ="invitation">
+				<div class="content span-7" id="invitation">
 					<h2 class="major">우리결혼해요</h2>
-					<p id="subContent"> 서로 마주 보며 다져온 사랑을<br> 이제 함께 한곳을 바라보며 걸어갈 수 있는<br> 큰 사랑으로 키우고자 합니다.<br> 저희 두 사람이 사랑의 이름으로<br> 지켜나갈 수 있게<br> 앞날을 축복해 주시면 감사하겠습니다.</p>
-					<br> <p><span id="boldSpan">박점희</span>의 장남 &nbsp;<span id="boldSpan">김요셉</span></p>
+					<p id="subContent"> 서로 마주 보며 다져온 사랑을<br> 이제 함께 한곳을 바라보며 걸어갈 수 있는<br> 큰 사랑으로 키우고자 합니다.<br> 저희 두 사람이
+						사랑의 이름으로<br> 지켜나갈 수 있게<br> 앞날을 축복해 주시면 감사하겠습니다.</p>
+					<br>
+					<p><span id="boldSpan">박점희</span>의 장남 &nbsp;<span id="boldSpan">김요셉</span></p>
 					<p><span id="boldSpan">황명주</span>의 차녀 &nbsp;<span id="boldSpan">장정은</span></p>
 					<br>
 					<p style="margin-bottom: 1.1rem;">2022년 10월 23일 일요일 오후 1시 30분</p>
 					<p>강북컨벤션(대구) 2층 제너스홀</p>
 					<br>
 					<p style="margin-bottom: 1.1rem;">[마음 전하실 곳]</p>
-					<p style="margin-bottom: 1.1rem;">신랑 대구은행 094-13-188693</p>
-					<p>신부 대구은행 508-12-706921-8</p>
+					<p style="margin-bottom: 1.0rem;">신랑측</p>
+					<p id="yosepAccount" style="margin-bottom: 0.2rem;">대구은행 094-13-188693 김요셉</p> <input type="button" value="계좌번호 복사" onclick="copy_to_yosepAccount()" readonly> <br>
+					<p id="momAccount" style="margin-bottom: 0.2rem;">대구은행 094-13-188693 박점희</p> <input type="button" value="계좌번호 복사" onclick="copy_to_momAccount()" readonly> <br>
+					<p style="margin-bottom: 1.0rem;">신부측</p>
+					<p id="jeongeunAccount" style="margin-bottom: 0.2rem;">대구은행 508-12-706921-8 장정은</p> <input type="button" value="계좌번호 복사" onclick="copy_to_jeongeunAccount()" readonly>
 				</div>
 				<div class="image filtered tinted" data-position="top left">
 					<img src="images/pic02.jpg" alt="" />
@@ -232,20 +262,23 @@
 				</div>
 				<div class="gallery">
 					<div class="group span-2">
-						<a href="images/weding/메인사진.jpg" class="image span-1-5"
-							data-position="center"><img src="images/weding/메인사진.jpg" alt="" /></a>
+						<a href="images/weding/메인사진.jpg" class="image span-1-5" data-position="center"><img
+								src="images/weding/메인사진.jpg" alt="" /></a>
 						<a href="images/weding/KakaoTalk_20220720_220148390_07.jpg" class="image span-1-5"
-							data-position="bottom"><img src="images/weding/KakaoTalk_20220720_220148390_07.jpg" alt="" /></a>
+							data-position="bottom"><img src="images/weding/KakaoTalk_20220720_220148390_07.jpg"
+								alt="" /></a>
 					</div>
-					<a href="images/weding/KakaoTalk_20220720_220148390_01.jpg" class="image span-2-5" data-position="top"><img
-							src="images/weding/KakaoTalk_20220720_220148390_01.jpg" alt="" /></a>
+					<a href="images/weding/KakaoTalk_20220720_220148390_01.jpg" class="image span-2-5"
+						data-position="top"><img src="images/weding/KakaoTalk_20220720_220148390_01.jpg" alt="" /></a>
 					<div class="group span-3-5">
 						<a href="images/weding/KakaoTalk_20220720_220148390_08.jpg" class="image span-1-5"
-							data-position="center"><img src="images/weding/KakaoTalk_20220720_220148390_08.jpg" alt="" /></a>
+							data-position="center"><img src="images/weding/KakaoTalk_20220720_220148390_08.jpg"
+								alt="" /></a>
 						<a href="images/weding/KakaoTalk_20220720_220148390_09.jpg" class="image span-1-5"
-							data-position="bottom"><img src="images/weding/KakaoTalk_20220720_220148390_09.jpg" alt="" /></a>
-						<a href="images/weding/KakaoTalk_20220720_220148390.jpg" class="image span-3" data-position="top"><img
-								src="images/weding/KakaoTalk_20220720_220148390.jpg" alt="" /></a>
+							data-position="bottom"><img src="images/weding/KakaoTalk_20220720_220148390_09.jpg"
+								alt="" /></a>
+						<a href="images/weding/KakaoTalk_20220720_220148390.jpg" class="image span-3"
+							data-position="top"><img src="images/weding/KakaoTalk_20220720_220148390.jpg" alt="" /></a>
 					</div>
 					<a href="images/weding/main.jpg" class="image span-2-5" data-position="left"><img
 							src="images/weding/main.jpg" alt="" /></a>
@@ -255,10 +288,10 @@
 			<!-- Panel -->
 			<section class="panel color4-alt">
 				<div class="intro color4">
-					<h2 class="major">Contact</h2>
-					<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed
-						feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat
-						magna etiam.</p>
+					<h2 class="major">오시는 길</h2>
+					<div id="map" style="width:100%; height: 300px; padding: 20px 2.75rem 1.3875rem 2.75rem;">
+
+					</div>
 				</div>
 				<div class="inner columns divided">
 					<div class="span-3-25">
@@ -294,296 +327,92 @@
 				</div>
 			</section>
 
-			<!-- Panel -->
-			<section class="panel color2-alt">
-				<div class="intro color2">
-					<h2 class="major">Elements</h2>
-					<p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed
-						feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat
-						magna etiam. </p>
-				</div>
-				<div class="inner columns aligned">
-					<div class="span-2-75">
-
-						<h3 class="major">Text</h3>
-						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is
-							<em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a
-								href="#">this is a link</a>.</p>
-
-						<h1>Heading Level 1</h1>
-						<h2>Heading Level 2</h2>
-						<h3>Heading Level 3</h3>
-						<h4>Heading Level 4</h4>
-						<h5>Heading Level 5</h5>
-						<h6>Heading Level 6</h6>
-
-					</div>
-					<div class="span-3">
-
-						<h4>Blockquote</h4>
-						<blockquote>Lorem ipsum dolor sit amet. Felis sagittis eget tempus euismod. Vestibulum ante
-							ipsum primis in vestibulum. Blandit adipiscing eu iaculis volutpat ac adipiscing volutpat ac
-							adipiscing faucibus.</blockquote>
-
-						<h4>Preformatted</h4>
-						<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + (i++);
-    deck.shuffle();
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-
-					</div>
-					<div class="span-1-25">
-
-						<h3 class="major">Lists</h3>
-
-						<h4>Unordered</h4>
-						<ul>
-							<li>Lorem ipsum dolor sit.</li>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Etiam vel felis viverra.</li>
-						</ul>
-
-						<h4>Alternate</h4>
-						<ul class="alt">
-							<li>Lorem ipsum dolor sit.</li>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Etiam vel felis viverra.</li>
-							<li>Felis enim feugiat.</li>
-						</ul>
-
-					</div>
-					<div class="span-1-5">
-
-						<h4>Ordered</h4>
-						<ol>
-							<li>Lorem ipsum dolor sit.</li>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Etiam vel felis viverra.</li>
-							<li>Felis enim feugiat.</li>
-							<li>Etiam vel felis lorem.</li>
-						</ol>
-
-						<h4>Actions</h4>
-						<ul class="actions">
-							<li><a href="#" class="button primary color2">Default</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary color2">Default</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-
-					</div>
-					<div class="span-1-25">
-
-						<h4>Icons</h4>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
-							</li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
-							</li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
-						</ul>
-
-						<h4>Contact Icons</h4>
-						<ul class="contact-icons color2">
-							<li class="icon brands fa-twitter"><a href="#">Twitter</a></li>
-							<li class="icon brands fa-facebook-f"><a href="#">Facebook</a></li>
-							<li class="icon brands fa-instagram"><a href="#">Instagram</a></li>
-							<li class="icon brands fa-github"><a href="#">GitHub</a></li>
-							<li class="icon brands fa-medium-m"><a href="#">Medium</a></li>
-						</ul>
-
-					</div>
-					<div class="span-3">
-						<h3 class="major">Table</h3>
-						<h4>Default</h4>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</div>
-					<div class="span-3">
-						<h4>Alternate</h4>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</div>
-					<div class="span-2-25">
-						<h3 class="major">Buttons</h3>
-						<ul class="actions">
-							<li><a href="#" class="button primary color2">Primary</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button">Default</a></li>
-							<li><a href="#" class="button large">Large</a></li>
-							<li><a href="#" class="button small">Small</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button primary color2 icon solid fa-cog">Icon</a></li>
-							<li><a href="#" class="button icon fa-gem">Icon</a></li>
-						</ul>
-						<ul class="actions">
-							<li><span class="button primary color2 disabled">Disabled</span></li>
-							<li><span class="button disabled">Disabled</span></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button primary color2 circle icon solid fa-cog">Icon</a></li>
-							<li><a href="#" class="button circle icon fa-gem">Icon</a></li>
-						</ul>
-					</div>
-					<div class="span-4-5">
-						<h3 class="major">Form</h3>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field third">
-									<label for="demo-name">Name</label>
-									<input type="text" name="demo-name" id="demo-name" value=""
-										placeholder="Jane Doe" />
-								</div>
-								<div class="field third">
-									<label for="demo-email">Email</label>
-									<input type="email" name="demo-email" id="demo-email" value=""
-										placeholder="jane@untitled.tld" />
-								</div>
-								<div class="field third">
-									<label for="demo-category">Category</label>
-									<div class="select-wrapper">
-										<select name="demo-category" id="demo-category">
-											<option value="">-</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-								</div>
-								<div class="field quarter">
-									<input type="radio" id="demo-priority-low" name="demo-priority" class="color2"
-										checked />
-									<label for="demo-priority-low">Low Priority</label>
-								</div>
-								<div class="field quarter">
-									<input type="radio" id="demo-priority-high" name="demo-priority" class="color2" />
-									<label for="demo-priority-high">High Priority</label>
-								</div>
-								<div class="field quarter">
-									<input type="checkbox" id="demo-copy" name="demo-copy" class="color2" />
-									<label for="demo-copy">Email a copy</label>
-								</div>
-								<div class="field quarter">
-									<input type="checkbox" id="demo-human" name="demo-human" class="color2" checked />
-									<label for="demo-human">Not a robot</label>
-								</div>
-								<div class="field">
-									<label for="demo-message">Message</label>
-									<textarea name="demo-message" id="demo-message" placeholder="Enter your message"
-										rows="2"></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" class="primary color2" /></li>
-								<li><input type="reset" value="Reset" /></li>
-							</ul>
-						</form>
-					</div>
-				</div>
-			</section>
-
 			<!-- Copyright -->
-			<div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+			<div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">김 프로</a>.</div>
 
 		</div>
 
 	</div>
 
 	<!-- Scripts -->
+	<script>
+		var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+		var options = { //지도를 생성할 때 필요한 기본 옵션
+			center: new kakao.maps.LatLng(35.901347, 128.546555), //지도의 중심좌표.
+			level: 4 //지도의 레벨(확대, 축소 정도)
+		};
+
+		var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+		// 마커가 표시될 위치입니다 
+		var markerPosition  = new kakao.maps.LatLng(35.901347, 128.546555); 
+
+		// 마커를 생성합니다
+		var marker = new kakao.maps.Marker({
+			position: markerPosition
+		});
+
+		// 마커가 지도 위에 표시되도록 설정합니다
+		marker.setMap(map);
+
+		var iwContent =
+			'<div style="padding:5px; color:black">강북컨벤션웨딩 <br><a href="https://map.kakao.com/link/map/강북컨벤션웨딩,35.901347,128.546555" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/강북컨벤션웨딩,35.901347,128.546555" style="color:blue" target="_blank">길찾기</a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+			iwPosition = new kakao.maps.LatLng(35.901347, 128.546555); //인포윈도우 표시 위치입니다
+
+		// 인포윈도우를 생성합니다
+		var infowindow = new kakao.maps.InfoWindow({
+			position: iwPosition,
+			content: iwContent,
+removable: true
+		});
+		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+		var zoomControl = new kakao.maps.ZoomControl();
+		map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+		// 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+		infowindow.open(map, marker);
+		// 마커에 클릭이벤트를 등록합니다
+		kakao.maps.event.addListener(marker, 'click', function() {
+			// 마커 위에 인포윈도우를 표시합니다
+			infowindow.open(map, marker);  
+		});
+	</script>
 	<script src="assets/js/jquery.min.js"></script>
+	<script>
+		function copy_to_yosepAccount() {
+			var copyText = document.getElementById("yosepAccount");
+			var range = document.createRange();
+			range.selectNode(copyText.childNodes[0]);
+			var sel = window.getSelection();
+			sel.removeAllRanges();
+			sel.addRange(range);
+			document.execCommand("copy");
+			sel.removeRange(range);
+			alert('계좌번호가 복사되었습니다');
+   		}
+		   function copy_to_jeongeunAccount() {
+			var copyText = document.getElementById("jeongeunAccount");
+			var range = document.createRange();
+			range.selectNode(copyText.childNodes[0]);
+			var sel = window.getSelection();
+			sel.removeAllRanges();
+			sel.addRange(range);
+			document.execCommand("copy");
+			sel.removeRange(range);
+			alert('계좌번호가 복사되었습니다');
+   		}
+		   function copy_to_momAccount() {
+			var copyText = document.getElementById("momAccount");
+			var range = document.createRange();
+			range.selectNode(copyText.childNodes[0]);
+			var sel = window.getSelection();
+			sel.removeAllRanges();
+			sel.addRange(range);
+			document.execCommand("copy");
+			sel.removeRange(range);
+			alert('계좌번호가 복사되었습니다');
+   		}
+	</script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/main.js"></script>
