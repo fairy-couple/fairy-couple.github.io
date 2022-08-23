@@ -60,6 +60,7 @@
 
 		#subContent {
 			/* text-align: center; */
+			line-height: 1.8;
 		}
 
 		.panel.banner.right {
@@ -70,7 +71,7 @@
 		#wedingDay {
 			color: black;
 			text-align: center;
-			font-size: 1.3rem;
+			font-size: 1.8rem;
 		}
 
 		#wedingPlace {
@@ -157,8 +158,7 @@
 		}
 		input{
 			text-align: center;
-			width: 60%;
-			margin:0 auto;
+			width: 100%;
 		}
 	</style>
 </head>
@@ -184,9 +184,6 @@
 						<li id="groom"><a href="#man" class="btn blue">신랑<br> 보러가기</a></li>
 						<li id="bride"><a href="#girl" class="btn red">신부<br> 보러가기</a></li>
 					</ul>
-					<audio controls loop autoplay id="bgm">
-						<source src="/assets/sound/Royalty Free Happy Upbeat Ukulele Background Music - Free Download.mp3" type="audio/mpeg">
-					  </audio>
 				</div>
 				<div class="image span-1-75 gallery filtered" data-position="100% 100%" id="mainImg">
 					<img src="images/weding/KakaoTalk_20220720_220148390_02.jpg" alt="" />
@@ -195,8 +192,8 @@
 			<!-- 신랑 소개 -->
 			<section class="panel color1">
 				<div class="gallery">
-					<a href="images/weding/신랑독사진.jpg" class="image span-2-5" data-position="top"><img
-							src="images/weding/신랑독사진.jpg" id="man" alt="" /></a>
+					<a href="images/weding/웨딩독사진수정.jpg" class="image span-2-5" data-position="top"><img
+							src="images/weding/웨딩독사진수정.jpg" id="man" alt="" /></a>
 				</div>
 				<div class="intro joined" style="margin-bottom: 20px;">
 					<h2 class="major">신랑 김요셉</h2>
@@ -240,28 +237,27 @@
 				</div>
 			</section>
 			<!-- Panel (Spotlight) -->
-			<section class="panel spotlight medium right" id="first">
-				<div class="content span-7" id="invitation">
-					<h2 class="major">우리결혼해요</h2>
-					<p id="subContent"> 서로 마주 보며 다져온 사랑을<br> 이제 함께 한곳을 바라보며 걸어갈 수 있는<br> 큰 사랑으로 키우고자 합니다.<br> 저희 두 사람이
+			<section class="panel medium right" style="" id="first">
+				<div class="content span-7" id="invitation" style="background-color: rgba(247, 239, 232, 0.7); color:black">
+					<h2 class="major" style="color:black; margin-top: 30px">우리결혼해요</h2>
+					<p id="subContent"> 서로 마주 보며 다져온 사랑을<br> 이제 함께 한곳을 바라보며 걸어갈 수 있는<br> 큰 사랑으로 키우고자 합니다. <br>
+						코로나로 인하여 참석에 대한 <br>부담을 갖지 마시고 못 오시는 분들 <br>소식에 서운해 하지 않겠습니다. <br> 저희 두 사람이
 						사랑의 이름으로<br> 지켜나갈 수 있게<br> 앞날을 축복해 주시면 감사하겠습니다.</p>
 					<br>
 					<p><span id="boldSpan">박점희</span>의 장남 &nbsp;<span id="boldSpan">김요셉</span></p>
 					<p><span id="boldSpan">황명주</span>의 차녀 &nbsp;<span id="boldSpan">장정은</span></p>
 					<br>
-					<p style="margin-bottom: 1.1rem;">2022년 10월 23일 일요일 오후 1시 30분</p>
-					<p>강북컨벤션(대구) 2층 제너스홀</p>
+					<p style="margin-bottom: 1.1rem; font-size: 1.5rem;">2022년 10월 23일 일요일 오후 1시 30분</p>
+					<p style="font-size: 1.5rem;">강북컨벤션(대구) 2층 제너스홀</p>
 					<br>
-					<p style="margin-bottom: 1.1rem;">[마음 전하실 곳]</p>
-					<p style="margin-bottom: 1.0rem;">&lt; 신랑측 &gt;</p>
-					<p id="yosepAccount" style="margin-bottom: 0.6rem;">대구은행 094-13-188693 김요셉</p> <input style="margin-bottom: 1.1rem; font-size: medium;" type="button" value="계좌번호 복사" onclick="copy_to_yosepAccount()" readonly> 
-					<p id="momAccount" style="margin-bottom: 0.6rem;">대구은행 094-13-188693 박점희</p> <input style="margin-bottom: 1.4rem; font-size: medium;" type="button" value="계좌번호 복사" onclick="copy_to_momAccount()" readonly> 
-					<p style="margin-bottom: 1.0rem;">&lt; 신부측 &gt;</p>
-					<p id="jeongeunAccount" style="margin-bottom: 0.6rem;">대구은행 508-12-706921-8 장정은</p> <input style="font-size: medium;"type="button" value="계좌번호 복사" onclick="copy_to_jeongeunAccount()" readonly>
+					<p style="margin-bottom: 0.5rem;">[마음 전하실 곳]</p>
+					<p style="margin-bottom: 0.4rem;">&lt; 신랑측 &gt;</p>
+					<p id="yosepAccount" style="margin-bottom: 0.6rem;">대구은행 094-13-188693 김요셉 &nbsp;<span><a style="margin-bottom: 1.1rem; font-size: small; border: 2px solid black; padding: 5px;  color: black" type="button" onclick="copy_to_yosepAccount()" readonly>복사</a></span></p>
+					<p id="momAccount" style="margin-bottom: 0.6rem;">농협 702047-56-019792 박점희 &nbsp;<span><a style="margin-bottom: 1.4rem; font-size: small; border: 2px solid black; padding: 5px;  color: black" type="button" onclick="copy_to_momAccount()" readonly>복사</a></span></p> 
+					<p style="margin-bottom: 0.4rem;">&lt; 신부측 &gt;</p>
+					<p id="jeongeunAccount" style="margin-bottom: 30px;">대구은행 508-12-706921-8 장정은 &nbsp;<span><a style="font-size: small; border: 2px solid black; padding: 5px;  color: black"type="button" onclick="copy_to_jeongeunAccount()" readonly>복사</a></span></p> 
 				</div>
-				<div class="image filtered tinted" data-position="top left">
-					<img src="images/pic02.jpg" alt="" />
-				</div>
+				
 			</section>
 
 			<!-- Panel -->
@@ -290,8 +286,8 @@
 						<a href="images/weding/KakaoTalk_20220720_220148390.jpg" class="image span-3"
 							data-position="top"><img src="images/weding/KakaoTalk_20220720_220148390.jpg" alt="" /></a>
 					</div>
-					<a href="images/weding/main.jpg" class="image span-2-5" data-position="left"><img
-							src="images/weding/main.jpg" alt="" /></a>
+					<a href="images/weding/18-re수정.jpg" class="image span-2-5" data-position="left"><img
+							src="images/weding/18-re수정.jpg" alt="" /></a>
 				</div>
 			</section>
 
@@ -321,7 +317,7 @@
 			</section>
 
 			<!-- Copyright -->
-			<div class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">김 프로</a>.</div>
+			<div class="copyright">&copy; Untitled. Design: 김 프로.</div>
 
 		</div>
 
