@@ -17,9 +17,11 @@
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css"> -->
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c3376697716997a186d3b3774a029124">
 	</script>
-	<title>요정커플 청첩장</title>
+	<title>10월 23일 (일) 오후 1시 30분</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+	<meta property="og:title" content="10월 23일 (일) 오후 1시 30분">
+	<meta property="og:description" content="강북컨벤션(대구) / 2층 제너스홀">
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -247,7 +249,7 @@
 					<p><span id="boldSpan">박점희</span>의 장남 &nbsp;<span id="boldSpan">김요셉</span></p>
 					<p><span id="boldSpan">황명주</span>의 차녀 &nbsp;<span id="boldSpan">장정은</span></p>
 					<br>
-					<div style="border:3px solid black; padding:20px">
+					<div style="border:3px solid black; padding:20px;">
 					<p style="margin-bottom: 1.1rem; font-size: 1.5rem;">2022년 10월 23일 일요일<br> 오후 1시 30분</p>
 					<p style="font-size: 1.5rem; margin-bottom: 0;">강북컨벤션(대구) 2층 제너스홀</p>
 					</div>
@@ -319,18 +321,14 @@
 					</div>
 				</div>
 				<div class="inner columns divided">
-					<div class="span-3-25">
-						<p>강북컨벤션웨딩 : 053-292-8000 / 대구광역시 북구 매천동 618-24</p>
-						<p>교통편<br>버스이용시 : 527, 708, 719, 724, 726, 730, 750, 북구1 (대백인터빌 또는 농수산물시장 하차)</p>
-					</div>
-					<div class="span-1-5">
-						<ul class="contact-icons color1">
-							<li class="icon brands fa-twitter"><a href="#">@untitled-tld</a></li>
-							<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled</a></li>
-							<li class="icon brands fa-snapchat-ghost"><a href="#">@untitled-tld</a></li>
-							<li class="icon brands fa-instagram"><a href="#">@untitled-tld</a></li>
-							<li class="icon brands fa-medium-m"><a href="#">medium.com/untitled</a></li>
-						</ul>
+					<div class="span-3-25" style="line-height: 2;">
+						<p>강북컨벤션웨딩 : <span id="route">대구광역시 북구 매천동 618-24 &nbsp;</span><span><a style="margin-bottom: 1.1rem; font-size: small; border: 2px solid rgba(255, 255, 255, 0.75); padding: 5px;  color: rgba(255, 255, 255, 0.75)" type="button" onclick="copy_to_route()" readonly>복사</a></p>
+						<p>버스이용 : 527, 708, 719, 724, 726, 730, 750, 북구1 (대백인터빌 또는 농수산물시장 하차)</p>
+						<p>승용차 이용
+						<br>&bull;칠곡IC: 직진 &rarr; 칠곡 네거리에서 우회전 &rarr; 팔달교방향 직진 &rarr; 고가도로타지 않고 전방 300m 우측
+						<br>&bull;북대구IC: 우측 &rarr; 서대구방향 &rarr; 칠곡방향으로 팔달교 건너 고가도로 밑에서 유턴
+						<br>&bull;시내: 만평네거리 지나 팔달교방면 진입 &rarr; 칠곡방향으로 팔달교 건너 고가도로 밑으로 유턴
+						</p>
 					</div>
 				</div>
 			</section>
@@ -396,9 +394,9 @@ removable: true
 			sel.addRange(range);
 			document.execCommand("copy");
 			sel.removeRange(range);
-			alert('계좌번호가 복사되었습니다');
+			alert('복사되었습니다');
    		}
-		   function copy_to_jeongeunAccount() {
+		function copy_to_jeongeunAccount() {
 			var copyText = document.getElementById("jeongeunAccount");
 			var range = document.createRange();
 			range.selectNode(copyText.childNodes[0]);
@@ -407,9 +405,9 @@ removable: true
 			sel.addRange(range);
 			document.execCommand("copy");
 			sel.removeRange(range);
-			alert('계좌번호가 복사되었습니다');
+			alert('복사되었습니다');
    		}
-		   function copy_to_momAccount() {
+		function copy_to_momAccount() {
 			var copyText = document.getElementById("momAccount");
 			var range = document.createRange();
 			range.selectNode(copyText.childNodes[0]);
@@ -418,7 +416,18 @@ removable: true
 			sel.addRange(range);
 			document.execCommand("copy");
 			sel.removeRange(range);
-			alert('계좌번호가 복사되었습니다');
+			alert('복사되었습니다');
+   		}
+		function copy_to_route() {
+			var copyText = document.getElementById("route");
+			var range = document.createRange();
+			range.selectNode(copyText.childNodes[0]);
+			var sel = window.getSelection();
+			sel.removeAllRanges();
+			sel.addRange(range);
+			document.execCommand("copy");
+			sel.removeRange(range);
+			alert('복사되었습니다');
    		}
 	</script>
 
